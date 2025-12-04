@@ -4,39 +4,25 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./features/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  // CSS purging  production
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: [
-      "./app/**/*.{js,ts,jsx,tsx,mdx}",
-      "./components/**/*.{js,ts,jsx,tsx,mdx}",
-      "./features/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
-    options: {
-      safelist: [
-        "animate-pulse",
-        "animate-spin",
-        "bg-secondary",
-        "text-primary",
-        "border-primary",
-      ],
-    },
-  },
+  safelist: [
+    "animate-pulse",
+    "animate-spin",
+    "bg-secondary",
+    "text-primary",
+    "border-primary",
+  ],
   theme: {
     extend: {
       screens: {
-        xs: "375px", // mobilni mali
-        sm: "480px", // mobilni veći
-        md: "600px", // mobilni veći / tablet manji
-        lg: "768px", // tablet / mali laptop
-        xl: "1024px", // laptop
-        "2xl": "1200px", // veći desktop
+        xs: "375px",
+        sm: "480px",
+        md: "600px",
+        lg: "768px",
+        xl: "1024px",
+        "2xl": "1200px",
       },
-
       spacing: {
         1: "10px",
         1.5: "15px",
@@ -46,11 +32,9 @@ module.exports = {
         5: "50px",
         6: "60px",
       },
-
       maxWidth: {
         "screen-xl": "1200px",
       },
-
       fontSize: {
         xs: "12px",
         sm: "14px",
@@ -62,7 +46,6 @@ module.exports = {
         "4xl": "40px",
         "5xl": "50px",
         "6xl": "60px",
-
         h1: [
           "clamp(2.5rem, 5vw, 50px)",
           { lineHeight: "1.2", fontWeight: "500" },
@@ -76,15 +59,11 @@ module.exports = {
           { lineHeight: "1.4", fontWeight: "500" },
         ],
       },
-
       colors: {
         background: "#1C1C1C",
-        // Primary
         primary: "#4CFFC0",
         "primary-light": "#A0FFE0",
         "primary-dark": "#00B37E",
-
-        // Secondary
         secondary: "#363636",
         "secondary-light": "#5A5A5A",
         "secondary-dark": "#1A1A1A",
